@@ -1,0 +1,41 @@
+
+get = traer info
+post = crear un  nuevo recurso 
+put = remplzar un objeto o reursos  por uno nuevo
+patch = actualiar el reurso
+delete = eliminar el objeto o reursos
+
+
+---------------------
+que es http = son solicitudes que realiza el cliente al servidor.
+para llevar a cabo la solicitud se utliza un conjunto de codigos que estan dividias en 5 categorias.
+
+
+1xx(100-199) = Respuesta informativa : indica que la solicitud fue recibida y procesada.
+
+2xx(200-299) = Respuesta exitosa: indican que la solicitud fue recibida, entendida , y aceptada exitosamente.
+
+3xx(300-399) = Redirreccion : indican que el cliente necesita realizar una accion adicional para completar la solicitud.
+
+4xx(400-499) = Error de cliente: indican que hay un error en la solicitud realizada por el cliente, como una URL  incorrecta o falta de permisos
+
+5xx(500-599) = Error de servidor : indican que hay un error en el servidor al intentar procesar la solicitud del cliente.
+
+Resumen de los codigos mas usados:
+
+        200: te dice que todo esta bien el la solicitud
+        201: indica que estas creando un nuevo recurso
+        204: cuando se realiza un peticion pero no hay contenido que mostrar.
+        301: cuando el contenido esta redireccionado a otro lado permanentemente
+        302: cuando se redirreiona un contenido pero de forma temporar
+        304: muestra este error cuando el contenido que queres mostrar no fue modificado.
+        400: cuando ponemos mal la URL o request
+        401: cuando no tenemos permisos a esa informacion que quemos usar.
+        403: muestra este error cuando no tenemos acceso aunque tengamos password o token
+        404: cuando no se encuentra no que le buscamos
+        500: comunmente es cuando la BD no esta disponible x algun motivo
+        503: indica que el servicio no esta disponible momentaneamente
+
+
+
+

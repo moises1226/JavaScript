@@ -1,0 +1,29 @@
+//creacion de function autocomvocada
+
+(async () => {
+    main()
+})()
+
+//funcion acnostica con ejetuble
+// ( como quereso que ande la funcion (ej async)() => ()
+
+//     lo que quemos llamar
+
+// )(ejecutable)
+
+
+-----------------------------------------------------------------------------
+
+
+//creacion de function AGNOSTICA autocomvocada
+// agnstica porque no tiene nombre
+//convocada por la ejecutamos con los parentecis
+
+const main = () => {
+
+    console.log('el servidor funciona');
+}
+
+(async () => {
+    main()
+})()

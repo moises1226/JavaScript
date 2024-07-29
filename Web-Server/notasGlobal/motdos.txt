@@ -1,0 +1,2 @@
+req = son peticiones que te hace el navegador
+res = es lo que nosotros damos, basicamente es la respuesta q damos a la peticion
