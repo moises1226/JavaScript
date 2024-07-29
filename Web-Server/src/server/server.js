@@ -1,7 +1,8 @@
-const express = require ('express')
-const path = require('path')
+import express from 'express'
 
-const startServer = (opcions) => {
+import path from 'path'
+
+export const startServer = (opcions) => {
 
     const {port , public_path = 'public'} = opcions;
 
@@ -14,7 +15,7 @@ const startServer = (opcions) => {
     app.get("*", (req, res ) => {
 
 
-        const indexPath = path.join(__dirname + `../../../${public_path}/vista.html`  )
+        const indexPath = path.join(__dirname + `../../../${public_path}/vista.html` )
         res.sendFile(indexPath);
 
     }) 
@@ -25,12 +26,5 @@ const startServer = (opcions) => {
 
 
     }) 
-
-}
-
-module.exports = {
-
-
-    startServer
 
 }
