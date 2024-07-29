@@ -5,7 +5,7 @@ import env from 'dotenv'
 
 env.config()
 
-import envVar from 'env-var';
+import envVar from 'env-var'
 
 export const envs = {
 

@@ -1,8 +1,13 @@
 import express from 'express'
 
 import path from 'path'
+// en ES6 no viene x defeto el __dirname (es el q busca la url del arch vista)
+//por ellos tenemos q llmar a esras 2 funciones
+//despues realizamos a conversion para asi poder usarlo
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-export const startServer = (opcions) => {
+    const startServer = (opcions) => {
 
     const {port , public_path = 'public'} = opcions;
 
@@ -14,7 +19,9 @@ export const startServer = (opcions) => {
 
     app.get("*", (req, res ) => {
 
-
+        //conversion para que ande el __dirname
+        const __filename = fileURLToPath(import.meta.url);
+        const __dirname = dirname(__filename);
         const indexPath = path.join(__dirname + `../../../${public_path}/vista.html` )
         res.sendFile(indexPath);
 
@@ -28,3 +35,5 @@ export const startServer = (opcions) => {
     }) 
 
 }
+
+export {startServer};
