@@ -1,6 +1,0 @@
-
-get = traer info
-post = crear un  nuevo recurso 
-put = remplzar un objeto o reursos  por uno nuevo
-patch = actualiar el reurso
-delete = eliminar el objeto o reursos
